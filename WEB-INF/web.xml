@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	
+	<servlet>
+		
+		<servlet-name>SIGNUP</servlet-name>
+		<servlet-class>SIGNUP</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SIGNUP</servlet-name>
+		<url-pattern>/SIGNUP</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>LOGIN</servlet-name>
+		<servlet-class>LOGIN</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>LOGIN</servlet-name>
+		<url-pattern>/LOGIN</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ADDRECORD</servlet-name>
+		<servlet-class>ADDRECORD</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>ADDRECORD</servlet-name>
+		<url-pattern>/ADDRECORD</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UPDATEADMIN</servlet-name>
+		<servlet-class>UPDATEADMIN</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>UPDATEADMIN</servlet-name>
+		<url-pattern>/UPDATEADMIN</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DELETEADMIN</servlet-name>
+		<servlet-class>DELETEADMIN</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>DELETEADMIN</servlet-name>
+		<url-pattern>/DELETEADMIN</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VIEWRECORDSADMIN</servlet-name>
+		<servlet-class>VIEWRECORDSADMIN</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>VIEWRECORDSADMIN</servlet-name>
+		<url-pattern>/VIEWRECORDSADMIN</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LOGOUT</servlet-name>
+		<servlet-class>LOGOUT</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>LOGOUT</servlet-name>
+		<url-pattern>/LOGOUT</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DELETEUSERRECORD</servlet-name>
+		<servlet-class>DELETEUSERRECORD</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>DELETEUSERRECORD</servlet-name>
+		<url-pattern>/DELETEUSERRECORD</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>
+            Signup page
+        </title>
+
+
+        <script>
+            function validate()
+            {
+                var x=document.getElementById("usr_name").value;
+                var y=document.getElementById("email1").value;
+                var z=document.getElementById("password1").value;
+                var a=document.getElementById("cnf_password").value;
+
+                if(x=="" && y=="" && z=="" && a=="")
+                {
+                    document.getElementById("err").innerHTML="All field are empty";
+                    return false;
+                }
+                else if(x==""){
+                    document.getElementById("err").innerHTML="Username cannot be empty";
+                    return false;
+                }
+                else if(y==""){
+                    document.getElementById("err").innerHTML="Email cannot be empty";
+                    return false;
+                }
+                else if(z==""){
+                    document.getElementById("err").innerHTML="Password cannot be  empty";
+                    return false;
+                }
+                else if(x=="Admin" ||  x=="admin"){
+                    document.getElementById("err").innerHTML="Sorry this User Name you cannot Select please choose other name..";
+                    return false;
+                }
+                else if(a==""){
+                    document.getElementById("err").innerHTML="Confirm Password cannot be empty";
+                    return false;
+                }
+                else if(z.length<=6)
+                {
+                    document.getElementById("err").innerHTML="Password must contain 7 characters ";
+                    return false;
+                }
+                else if(a.length<6)
+                {
+                    document.getElementById("err").innerHTML=" Confirm Password must contain 7 characters ";
+                    return false;
+                }
+
+                else if(z!=a)
+                {
+                    document.getElementById("err").innerHTML="Password and Confirm Password not match ";
+                    return false;
+                }
+                
+                var at=y.indexOf("@");  
+                var dot=y.lastIndexOf(".");  
+                if (at<1 || dot<at+2 || dot+2>=y.length)
+                {
+                    document.getElementById("err").innerHTML="Email format not correct !";
+                    return false;
+                }
+
+            }
+        </script>
+
+        <style rel="stylesheet">
+                h2,pre{
+                    display:inline;
+                }
+                body{
+                    text-align: center;
+                }
+                .design
+                {
+                    color:rgb(238, 17, 17);
+                    font-size:large;
+                }
+                a{
+                    text-decoration: none;
+                    color:rgb(229, 22, 22);
+                }
+
+        </style>
+    </head>
+
+
+    <body>
+        <h1> Signup </h1><br>
+
+       <b> <div id="err" style="color:red;font-family:calibri"></div></b><br>
+        
+    <form action ="SIGNUP" method="post" onsubmit="return validate()">
+        <h2><pre>User Name :  </pre></h2> <input type="text" name="username" value="" id="usr_name" placeholder="Enter name"> <br><br>
+        <h2><pre>Email     :  </pre></h2> <input type="text" name="email" value="" id="email1" placeholder="Enter email"> <br><br>
+        <h2><pre>Password  :  <pre></h2><input type="password" name="password" value="" id="password1" placeholder="Enter password"> <br><br>
+        <h2><pre>Confirm Password:<pre></h2>  <input type="password" name="cn_password" value="" id="cnf_password" placeholder="Again  Enter password "> <br><br>
+        
+
+        <button type = "button" class="design" ><a href="login.html">Back to Login page</a></button>
+        <input class="design" type="submit" value="Signup" id ="Signup" name="signup" />
+        <input class="design" type="reset" value="Clear" />
+
+    </form>
+
+    </body>    
+</html>

@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>
+            Login page
+        </title>
+		<script>
+            function validate()
+            {
+                var x=document.getElementById("emai").value;
+                var y=document.getElementById("passwor").value;
+
+                if(x=="" && y=="")
+                {
+                    document.getElementById("err").innerHTML="All field are empty";
+                    return false;
+                }
+                else if(x==""){
+                    document.getElementById("err").innerHTML="Email cannot be empty";
+                    return false;
+                }
+				else if(y==""){
+                    document.getElementById("err").innerHTML="Password cannot be empty";
+                    return false;
+                }
+				else if(y.length<6)
+                {
+                    document.getElementById("err").innerHTML="Password must contain 6 characters ";
+                    return false;
+                }
+				
+				var at=x.indexOf("@");  
+                var dot=x.lastIndexOf(".");  
+                if (at<1 || dot<at+2 || dot+2>=x.length)
+                {
+                    document.getElementById("err").innerHTML="Email format not correct !";
+                    return false;
+                }
+
+            }
+        </script>
+        <style rel="stylesheet">
+                h2,pre{
+                    display:inline;
+                }
+                body{
+                    text-align: center;
+                }
+                .design
+                {
+                    color:rgb(229, 22, 22);
+                    font-size:large;
+                }
+                a{
+                    text-decoration: none;
+                    color:rgb(229, 22, 22);
+                }
+				h1
+				{
+				background-color:#00FF00;
+				display:inline;
+				}
+        </style>
+    </head>
+
+
+    <body>
+        <h1> Friend Record Book</h1><br><br><br>
+		
+		<div id="err" name="error" style="color:red;font-family:calibri"></div>
+		
+		
+        <form action="LOGIN" method="Post" onsubmit="return validate()">
+        <h2><pre>Email :  </pre></h2> <input type="text" name="email" value="" id="emai" placeholder="Enter email"> <br><br>
+        <h2><pre>Password:<pre></h2>  <input type="password" name="password" value="" id="passwor" placeholder="Enter password"> <br><br><br>
+        <input class="design" type="submit" value="Login" name="login">
+        <button type = "button" class="design" id ="be3" ><a href="signup.html">Signup</a></button>
+        <input class="design" type="reset" value="Clear" >
+    </form>
+    </body>    
+</html>
